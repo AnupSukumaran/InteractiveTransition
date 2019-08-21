@@ -127,7 +127,6 @@
                                 </state>
                                 <connections>
                                     <action selector="vcArabicCall:" destination="bwL-zQ-mD3" eventType="touchUpInside" id="pVg-Oe-MTC"/>
-                                    <action selector="vcCall:" destination="bwL-zQ-mD3" eventType="touchUpInside" id="drg-pS-ObU"/>
                                 </connections>
                             </button>
                         </subviews>
