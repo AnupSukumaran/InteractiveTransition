@@ -2,7 +2,11 @@
 
 import UIKit
 
+var arabic = false
+
 class FirstViewController: UIViewController {
+    
+   // var arabic = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,10 +18,20 @@ class FirstViewController: UIViewController {
   
     @IBAction func vcCall(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        arabic = false
         vc.transitioningDelegate = self
         present(vc, animated: true, completion: nil)
       
     }
+    
+    @IBAction func vcArabicCall(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        arabic = true
+        vc.transitioningDelegate = self
+        present(vc, animated: true, completion: nil)
+    }
+    
     
 
 }
@@ -25,14 +39,14 @@ class FirstViewController: UIViewController {
 extension FirstViewController: UIViewControllerTransitioningDelegate {
   
   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return FlipPresentAnimationController(direct: .left)
+    return FlipPresentAnimationController(direct: arabic ? .left : .right)
   }
   
   func animationController(forDismissed dismissed: UIViewController)
     -> UIViewControllerAnimatedTransitioning? {
       
       guard let vc = dismissed as? SecondViewController else { return nil }
-      return FlipDismissAnimationController(direct:  .left, interactionController: vc.swipeInteractionController)
+      return FlipDismissAnimationController(direct:  arabic ? .left : .right, interactionController: vc.swipeInteractionController)
       
   }
   

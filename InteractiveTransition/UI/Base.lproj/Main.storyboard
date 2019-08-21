@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bwL-zQ-mD3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,7 +12,7 @@
         <!--Page View Controller-->
         <scene sceneID="3Mu-SM-wjz">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AGd-FU-LZL" customClass="PageViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AGd-FU-LZL" customClass="PageViewController" customModule="InteractiveTransition" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4w-T5-gZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="547" y="1271"/>
@@ -20,20 +20,20 @@
         <!--Card View Controller-->
         <scene sceneID="414-sc-bQv">
             <objects>
-                <viewController storyboardIdentifier="CardViewController" id="YVg-2m-sqi" customClass="CardViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardViewController" id="YVg-2m-sqi" customClass="CardViewController" customModule="InteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zws-l1-jdr"/>
                         <viewControllerLayoutGuide type="bottom" id="0gx-9C-ZBh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s1R-uo-srS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-Xm-4A3">
-                                <rect key="frame" x="62.5" y="167" width="250" height="333.5"/>
+                                <rect key="frame" x="35.333333333333343" y="203" width="304.33333333333326" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT6-lC-jco">
-                                        <rect key="frame" x="102.5" y="154" width="45" height="25"/>
+                                        <rect key="frame" x="129.66666666666666" y="190.66666666666669" width="45" height="24.666666666666657"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -102,50 +102,64 @@
         <!--First View Controller-->
         <scene sceneID="cB4-KE-MSU">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="bwL-zQ-mD3" customClass="FirstViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="bwL-zQ-mD3" customClass="FirstViewController" customModule="InteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q9P-U2-JLf"/>
                         <viewControllerLayoutGuide type="bottom" id="h8u-vh-yEE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JfN-xZ-4b4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsQ-p7-YWu">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="162.66666666666666" y="391" width="50" height="30"/>
+                                <state key="normal" title="English">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="vcCall:" destination="bwL-zQ-mD3" eventType="touchUpInside" id="OMF-Qw-Jkf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-EE-nzd">
+                                <rect key="frame" x="94" y="472" width="118" height="107"/>
+                                <state key="normal" title="Arabic">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="vcArabicCall:" destination="bwL-zQ-mD3" eventType="touchUpInside" id="pVg-Oe-MTC"/>
+                                    <action selector="vcCall:" destination="bwL-zQ-mD3" eventType="touchUpInside" id="drg-pS-ObU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.14300211339999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XsQ-p7-YWu" firstAttribute="centerY" secondItem="JfN-xZ-4b4" secondAttribute="centerY" id="Awh-BG-Kjp"/>
+                            <constraint firstItem="QEh-EE-nzd" firstAttribute="top" secondItem="XsQ-p7-YWu" secondAttribute="bottom" constant="51" id="BXA-38-3dE"/>
                             <constraint firstItem="XsQ-p7-YWu" firstAttribute="centerX" secondItem="JfN-xZ-4b4" secondAttribute="centerX" id="Lwj-Ef-s4f"/>
+                            <constraint firstItem="QEh-EE-nzd" firstAttribute="width" secondItem="XsQ-p7-YWu" secondAttribute="width" constant="68" id="YLD-ei-b2g"/>
+                            <constraint firstItem="QEh-EE-nzd" firstAttribute="height" secondItem="XsQ-p7-YWu" secondAttribute="height" constant="77" id="fFp-f8-cPG"/>
+                            <constraint firstItem="QEh-EE-nzd" firstAttribute="centerX" secondItem="XsQ-p7-YWu" secondAttribute="centerX" constant="-34.666666666666657" id="oCc-By-jdJ"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJn-fm-iF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="2033"/>
+            <point key="canvasLocation" x="544.79999999999995" y="2032.7586206896553"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="k9u-tX-c3A">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="klk-a9-dUh" customClass="SecondViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="klk-a9-dUh" customClass="SecondViewController" customModule="InteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hrp-EB-PZf"/>
                         <viewControllerLayoutGuide type="bottom" id="fOA-pI-3xw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zfr-tl-bCP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHv-tG-dGj">
-                                <rect key="frame" x="22" y="20" width="93" height="52"/>
+                                <rect key="frame" x="22" y="44" width="93" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="aBP-Mf-rwV"/>
                                     <constraint firstAttribute="height" constant="52" id="sCH-Hw-NFu"/>
@@ -173,17 +187,17 @@
         <!--Reveal View Controller-->
         <scene sceneID="qP3-oN-gvn">
             <objects>
-                <viewController storyboardIdentifier="RevealViewController" id="uNX-72-ehJ" customClass="RevealViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RevealViewController" id="uNX-72-ehJ" customClass="RevealViewController" customModule="InteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bNc-W5-rSu"/>
                         <viewControllerLayoutGuide type="bottom" id="bZ4-Jc-mLk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e2C-ax-EbM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-2z-rrg">
-                                <rect key="frame" x="147.5" y="626" width="80" height="33"/>
+                                <rect key="frame" x="147.66666666666666" y="737" width="80" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                 <state key="normal" title="Start Over!">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,7 +208,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Umc-3p-hh4">
-                                <rect key="frame" x="0.0" y="83.5" width="375" height="500"/>
+                                <rect key="frame" x="-41" y="101.66666666666669" width="457" height="609"/>
                                 <constraints>
                                     <constraint firstAttribute="height" secondItem="Umc-3p-hh4" secondAttribute="width" multiplier="3:4" id="hou-KN-tR6"/>
                                     <constraint firstAttribute="width" secondItem="Umc-3p-hh4" secondAttribute="height" multiplier="3:4" id="yDV-a4-pIt"/>
@@ -212,7 +226,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-HX-5kc">
-                                <rect key="frame" x="166" y="51.5" width="43" height="24"/>
+                                <rect key="frame" x="166" y="69.666666666666671" width="43" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

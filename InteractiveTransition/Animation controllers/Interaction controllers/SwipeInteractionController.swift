@@ -17,7 +17,7 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
   
   private func prepareGestureRecognizer(in view: UIView) {
     let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleGesture(_:)))
-    gesture.edges = .right
+    gesture.edges = arabic ? .right : .left
     view.addGestureRecognizer(gesture)
   }
   
@@ -35,52 +35,80 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
       
     // 2
     case .began:
-       self.initialCenter = piece.center
-       self.initalWitdh = piece.frame.width
-       print("initialCenter.x = \(initialCenter.x)")
-       let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
-       self.initialX = newCenter.x
-       print("initialX = \(self.initialX)")
-//      print("initialCenter.x = \(self.initialCenter.x)")
+      
+      switch arabic {
+        
+      case true:
+        self.initialCenter = piece.center
+        self.initalWitdh = piece.frame.width
+        print("initialCenter.x = \(initialCenter.x)")
+        let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
+        self.initialX = newCenter.x
+        print("initialX = \(self.initialX)")
+      
+        
+      case false:
+        self.initialCenter = piece.center
+        
+      }
+      
       interactionInProgress = true
       viewController.dismiss(animated: true, completion: nil)
-      //update(translation.x)
+      
     // 3
     case .changed:
-      let newCenter = CGPoint(x: initialCenter.y + translation.y, y: initialCenter.x + translation.x)
-      //piece.center = newCenter
-      print("Transalation.x = \( (translation.x ) )")
       
-      print("width/2 = \(piece.frame.width/2)")
-      print("value.x = \( (translation.x / (piece.frame.width/2) ) )")
-     // print("Transalation.x = \( (translation.x / (piece.frame.width/2) ) )")
-      print("newCenter.x = \(newCenter.x)")
-      print("newCenter.y = \(newCenter.y)")
+      var value: CGFloat = 0.0
       
-      print("newCenter.x = \(newCenter.x)")
-      print("new.x = \(1 - (initialCenter.x/newCenter.x))")
-      let newX = 1 - (initialCenter.x/newCenter.x)
+      switch arabic {
+      case true:
+        let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
+        //piece.center = newCenter
+        print("Transalation.x = \( (translation.x ) )")
+        
+        print("width/2 = \(piece.frame.width/2)")
+        
+        print("value.x = \( (translation.x / (piece.frame.width/2) ) )")
+        
+        // print("Transalation.x = \( (translation.x / (piece.frame.width/2) ) )")
+        print("newCenter.x = \(newCenter.x)")
+        print("newCenter.y = \(newCenter.y)")
+        
+        print("newCenter.x = \(newCenter.x)")
+        print("new.x = \(1 - (initialCenter.x/newCenter.x))")
+        value = 1 - (initialCenter.x/newCenter.x)
+        
+        //      print("new.g = \((self.initialX - 1)/self.initialX)")
+        //
+        //      print("new.J = \(initialCenter.x/newCenter.x)")
+        //
+        //      print("new.x = \(1 - (initialCenter.x/newCenter.x))")
+        //      let newX = 1 - (initialCenter.x/newCenter.x)
+        //
+        // print("new.J = \((initialCenter.x / newCenter.x ))")
+        //      print("new.x = \((initialCenter.x / newCenter.x ) - 1 )")
+        //      let newX =  (initialCenter.x / newCenter.x) - 1
+        
+        //      print("new.x = \(1 - ( newCenter.x / initialX))")
+        //      let newX = 1 - ( newCenter.x / initialX)
+        
+        //      print("new.x = \(1 - ( newCenter.x / piece.frame.width))")
+      //      let newX = 1 - ( newCenter.x / piece.frame.width)
+        
+      case false:
+        let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
+        print("newCenter.x = \(newCenter.x)")
+        print("new.x = \(1 - (initialCenter.x/newCenter.x))")
+        value = 1 - (initialCenter.x/newCenter.x)
+        
+      }
       
-//      print("new.g = \((self.initialX - 1)/self.initialX)")
-//
-//      print("new.J = \(initialCenter.x/newCenter.x)")
-//
-//      print("new.x = \(1 - (initialCenter.x/newCenter.x))")
-//      let newX = 1 - (initialCenter.x/newCenter.x)
-//
-     // print("new.J = \((initialCenter.x / newCenter.x ))")
-//      print("new.x = \((initialCenter.x / newCenter.x ) - 1 )")
-//      let newX =  (initialCenter.x / newCenter.x) - 1
       
-//      print("new.x = \(1 - ( newCenter.x / initialX))")
-//      let newX = 1 - ( newCenter.x / initialX)
+     
       
-//      print("new.x = \(1 - ( newCenter.x / piece.frame.width))")
-//      let newX = 1 - ( newCenter.x / piece.frame.width)
-      
-      shouldCompleteTransition = newX > 0.5
+      shouldCompleteTransition = value > 0.5
       print("shouldCompleteTransition = \(shouldCompleteTransition)")
-      update(newX)
+      update(value)
       
     // 4
     case .cancelled:
