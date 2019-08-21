@@ -6,7 +6,9 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Ext1 = \(self.myComputedProperty)")
+        self.myComputedProperty = true
+        print("Ext2 = \(self.myComputedProperty)")
     }
     
   
@@ -23,14 +25,14 @@ class FirstViewController: UIViewController {
 extension FirstViewController: UIViewControllerTransitioningDelegate {
   
   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return FlipPresentAnimationController(direct: .right)
+    return FlipPresentAnimationController(direct: .left)
   }
   
   func animationController(forDismissed dismissed: UIViewController)
     -> UIViewControllerAnimatedTransitioning? {
       
       guard let vc = dismissed as? SecondViewController else { return nil }
-      return FlipDismissAnimationController(direct:  .right, interactionController: vc.swipeInteractionController)
+      return FlipDismissAnimationController(direct:  .left, interactionController: vc.swipeInteractionController)
       
   }
   

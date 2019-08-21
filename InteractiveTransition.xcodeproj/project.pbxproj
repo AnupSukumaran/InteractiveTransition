@@ -10,6 +10,7 @@
 		0E28A8F1230A6BBE0056BC3F /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E28A8F0230A6BBE0056BC3F /* FlipPresentAnimationController.swift */; };
 		0E325A14230BFC3B00FCB6D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E325A13230BFC3B00FCB6D7 /* FirstViewController.swift */; };
 		0E325A16230BFC9F00FCB6D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E325A15230BFC9F00FCB6D7 /* SecondViewController.swift */; };
+		0E334C0B230D065A000A3F3A /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E334C0A230D065A000A3F3A /* UIViewController+Ext.swift */; };
 		0E57E304230BCD9900C8B485 /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E57E303230BCD9900C8B485 /* FlipDismissAnimationController.swift */; };
 		0E57E306230BD0BD00C8B485 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E57E305230BD0BD00C8B485 /* SwipeInteractionController.swift */; };
 		18F4A6551F6355560076435C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F4A6541F6355560076435C /* Launch Screen.storyboard */; };
@@ -22,6 +23,7 @@
 		0E28A8F0230A6BBE0056BC3F /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		0E325A13230BFC3B00FCB6D7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		0E325A15230BFC9F00FCB6D7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0E334C0A230D065A000A3F3A /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		0E57E303230BCD9900C8B485 /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 		0E57E305230BD0BD00C8B485 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		18F4A6541F6355560076435C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -64,8 +66,8 @@
 		BB3B33A41B40386700B5C810 /* InteractiveTransition */ = {
 			isa = PBXGroup;
 			children = (
+				0E334C0A230D065A000A3F3A /* UIViewController+Ext.swift */,
 				BB3B33C91B40388D00B5C810 /* View controllers */,
-				BB3B33DF1B40654F00B5C810 /* Interaction controllers */,
 				BB3B33DE1B40654700B5C810 /* Animation controllers */,
 				BB3B33C81B40388A00B5C810 /* UI */,
 				BB3B33C71B40388600B5C810 /* Bundle files */,
@@ -104,6 +106,7 @@
 		BB3B33DE1B40654700B5C810 /* Animation controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3B33DF1B40654F00B5C810 /* Interaction controllers */,
 				0E28A8F0230A6BBE0056BC3F /* FlipPresentAnimationController.swift */,
 				0E57E303230BCD9900C8B485 /* FlipDismissAnimationController.swift */,
 			);
@@ -195,6 +198,7 @@
 			files = (
 				0E57E304230BCD9900C8B485 /* FlipDismissAnimationController.swift in Sources */,
 				0E325A14230BFC3B00FCB6D7 /* FirstViewController.swift in Sources */,
+				0E334C0B230D065A000A3F3A /* UIViewController+Ext.swift in Sources */,
 				0E28A8F1230A6BBE0056BC3F /* FlipPresentAnimationController.swift in Sources */,
 				0E325A16230BFC9F00FCB6D7 /* SecondViewController.swift in Sources */,
 				BB3B33A81B40386700B5C810 /* AppDelegate.swift in Sources */,
