@@ -34,7 +34,7 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
     guard let piece = gestureRecognizer.view else {return}
     
     let translation = gestureRecognizer.translation(in: piece.superview!)
-    
+
     switch gestureRecognizer.state {
       
     // 2
@@ -62,21 +62,15 @@ class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
       
       switch Gvar.arabic {
       case true:
-        let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
-      
-        print("newCenter.x-a = \(newCenter.x )")
-        print("newCenter.y = \(newCenter.y)")
-        
-        print("new.x-a = \(1 - (newCenter.x / initialCenter.x ))")
-        value = 1 - (newCenter.x / initialCenter.x )
-        
+        let newCenter = CGPoint(x: initialCenter.x - translation.x, y: initialCenter.y - translation.y)
     
-        
+        value = 1 - (initialCenter.x / newCenter.x)
+     
       case false:
         let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
         print("newCenter.x = \(newCenter.x)")
-        print("new.x = \(1 - (initialCenter.x/newCenter.x))")
-        value = 1 - (initialCenter.x/newCenter.x)
+        print("new.x1 = \(1 - (initialCenter.x / newCenter.x))")
+        value = 1 - (initialCenter.x / newCenter.x)
         
       }
       
